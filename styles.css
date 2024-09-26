@@ -90,3 +90,28 @@ button {
     box-shadow: 0 0 20px rgba(183,224,255, 0.6);
     background-color: rgba(104, 85, 224, 1);
   }  
+
+.about-us-container{
+    background: #B7E0FF;
+    display: flex;
+    height: 320px;
+    margin: 20% 0;
+    padding: 0 10%;
+}
+
+.about-us-container > div{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.about-us-container > img{
+    width: 40%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.about-us-container p{
+    width: 360px;
+    text-align: justify;
+}
