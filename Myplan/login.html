@@ -1,213 +1,205 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login/Sign Up Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
-        /* Reset margin dan padding untuk semua elemen */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Pengaturan tinggi dan font untuk body dan html */
         body, html {
             height: 100%;
-            font-family: Arial, sans-serif; 
-            box-sizing: border-box;
+            margin: 0;
             padding: 0;
+            font-family: "Times New Roman", Times, serif; 
+            overflow-x: hidden;
+        }
+
+        .container-fluid {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .left-section {
+            background: lightblue;
+            padding: 20px;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Membuat elemen anak berjarak sesuai ruang */
+            height: 100%;
             margin: 0;
         }
 
-        button{
-            cursor: pointer;
-            border: 0;
-            border-radius: 2px;
-            font-weight: 300;
-            margin: 0, 10px;
-            width: 200px;
-            padding: 10px, 0;
-            box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
-            transition: 0.4s;
+        .left-section h1 {
+            font-size: 2.5em;
+            margin: 0; /* Hapus margin bawah untuk menempel ke ikon */
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin-top: auto; /* Posisikan ikon sosial di bagian bawah */
+            margin-bottom: 5px;
+        }
+
+        .social-icons a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .right-section {
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            width: 300px;
             text-align: center;
         }
 
-        .previous{
-            color: rgb(0, 0, 0);
-            background-color: rgba(255, 255, 255, 1);
-            border: 1px solid rgba(104, 85, 224, 1);
-            width: 150px;
-            height: 50px;
-            padding: 15px;
-            margin-left: -20px;
-            margin-top: -20px;
-            position: absolute;
-        }
-        
-        button:hover {
-            color: white;
-            box-shadow: 0 0 20px rgba(183,224,255, 0.6);
-            background-color: rgba(104, 85, 224, 1);
-        }
-        
-
-        /* Container utama untuk layout */
-        .container {
-            display: flex; 
-            height: 100vh; 
+        .form-container h2 {
+            margin-bottom: 30px;
         }
 
-        /* Bagian kiri dengan latar belakang gradien */
-        .left-section {
-            background: lightblue;
-            flex: 1; 
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container .tabs {
             display: flex;
-            flex-direction: column; 
-            justify-content: space-between; 
-            color: black; 
-            padding: 20px; 
+            justify-content: space-around;
+            margin-bottom: 20px;
         }
 
-        /* Ukuran dan margin untuk judul di bagian kiri */
-        .left-section h1 {
-            font-size: 2.5em; 
+        .form-container .tabs div {
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+            position: relative;
+            transition: all 0.3s ease;
+            color: black; /* Warna teks untuk tab */
+        }
+
+        .form-container .tabs div.active {
+            border-bottom: 2px solid black; /* Garis bawah hitam untuk tab aktif */
+        }
+
+        .form-container .tabs div.inactive {
+            border-bottom: 2px solid lightgrey; /* Garis bawah abu-abu untuk tab tidak aktif */
+        }
+
+        /* Mengatur gaya tab aktif berdasarkan atribut */
+        .tab:focus, .tab:focus-within {
+            border-bottom: 2px solid black; /* Garis bawah hitam untuk tab aktif */
+        }
+
+        .tab:not(:focus) {
+            border-bottom: 2px solid lightgrey; /* Garis bawah abu-abu untuk tab tidak aktif */
+        }
+
+        .form-container button {
+            padding: 12px 30px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .form-container a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        .btn-back {
+            display: flex;
+            align-items: center;
+            color: black;
+            font-size: 24px;
             margin-bottom: 10px; 
         }
 
-        /* Ukuran dan margin untuk paragraf di bagian kiri */
-        .left-section p {
-            font-size: 1.5em; 
-            margin-bottom: 20px; 
+        .btn-back i {
+            margin-right: 10px;
         }
 
-        /* Mengatur ikon media sosial */
-        .social-icons {
-            display: flex;
-            justify-content: center; 
-            gap: 35px; 
-            margin-top: 20px; 
+        .btn-back:hover {
+            color: #007bff; 
+            transition: color 0.3s; 
         }
-
-        /* Ukuran ikon media sosial */
-        .social-icons a img {
-            width: 35px; 
-            height: auto; 
-        }
-
-        /* Bagian kanan dengan latar belakang putih */
-        .right-section {
-            flex: 1; 
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
-            background: white; 
-        }
-
-        /* Form login */
-        .login-form {
-            width: 300px; 
-            text-align: center; 
-        }
-
-        /* Ukuran dan margin untuk judul form */
-        .login-form h2 {
-            margin-bottom: 30px; 
-        }
-
-        /* Mengatur input pada form */
-        .login-form input {
-            width: 100%; 
-            padding: 10px; 
-            margin: 10px 0; 
-            border: 1px solid #ccc; 
-            border-radius: 5px; 
-        }
-
-        /* Mengatur tab di form */
-        .login-form .tabs {
-            display: flex; 
-            justify-content: space-around; 
-            margin-bottom: 20px; 
-        }
-
-        /* Mengatur gaya untuk tab */
-        .login-form .tabs div {
-            cursor: pointer; 
-            padding: 10px; 
-            font-weight: bold; 
-            position: relative; 
-        }
-
-        /* Garis bawah untuk tab yang aktif */
-        .login-form .tabs div.active {
-            border-bottom: 2px solid black; 
-        }
-
-        /* Garis bawah untuk tab yang tidak aktif */
-        .login-form .tabs div.pasif {
-            border-bottom: 2px solid lightgrey;
-        }
-
-        /* Mengatur tombol login */
-        .login-form button {
-            padding: 12px 30px; 
-            background: black; 
-            color: white; 
-            border: none; 
-            border-radius: 8px; 
-            cursor: pointer; 
-            margin-top: 30px; 
-        }
-
-        /* Mengatur link 'Forgot your password?' */
-        .login-form a {
-            display: block; 
-            margin-top: 50px; 
-            text-decoration: none; 
-            color: #333; 
-        }
-
     </style>
 </head>
 <body>
-
-    <div class="container">
+    <div class="container-fluid d-flex" style="height: 100vh;">
         <!-- Left Section -->
-        <div class="left-section">
-                <a href="landingPage.html"><button class="previous">Back</button></a>
+        <div class="col-md-6 left-section">
+            <!-- Tambahkan link untuk tombol kembali -->
+            <a href="landingPage.html" class="btn-back" style="text-decoration: none;">
+                <i class="bi bi-arrow-left"></i> Back
+            </a>
             <div>
                 <h1>Digital</h1>
                 <h1>Platform for</h1>
                 <h1>Management Financial</h1>
             </div>
+            <!-- Ikon sosmed diposisikan di bagian bawah -->
             <div class="social-icons">
-                <a href="#"><img src="images/instagram-black.png" alt="Instagram"></a>
-                <a href="#"><img src="images/facebook-black.png" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter-black.png" alt="Twitter"></a>
+                <a href="#"><i class="bi bi-instagram" style="font-size: 35px;"></i></a>
+                <a href="#"><i class="bi bi-facebook" style="font-size: 35px;"></i></a>
+                <a href="#"><i class="bi bi-twitter" style="font-size: 35px;"></i></a>
             </div>
         </div>
 
         <!-- Right Section -->
-        <div class="right-section">
-            <div class="login-form">
+        <div class="col-md-6 right-section">
+            <div class="form-container">
                 <h2>MyPlan</h2>
                 <div class="tabs">
-                    <div class="active">Login</div> 
-                    <div class="pasif">Sign Up</div> 
+                    <div class="tab" tabindex="0" onclick="document.getElementById('login-form').classList.add('active'); document.getElementById('signup-form').classList.remove('active'); this.classList.add('active'); this.nextElementSibling.classList.remove('active');">Login</div>
+                    <div class="tab" tabindex="0" onclick="document.getElementById('signup-form').classList.add('active'); document.getElementById('login-form').classList.remove('active'); this.classList.add('active'); this.previousElementSibling.classList.remove('active');">Sign Up</div>
                 </div>
 
-                <!-- Input untuk Login -->
-                <div class="login-inputs">
-                    <input type="text" placeholder="USERNAME" required> 
-                    <input type="email" placeholder="EMAIL" required> 
-                    <input type="password" placeholder="PASSWORD" required> 
-                    <button type="button" onclick="window.location.href='profile.html'">Login</button> 
+                <!-- Login Form -->
+                <div id="login-form" class="form-section active">
+                    <input type="email" placeholder="EMAIL" required>
+                    <input type="password" placeholder="PASSWORD" required>
+                    <button type="button" onclick="window.location.href='profile.html'">Login</button>
+                    <a href="forgotyourpassword.html">Forgot your password?</a>
                 </div>
-                <a href="forgotyourpassword.html">Forgot your password?</a> 
+
+                <!-- Sign Up Form -->
+                <div id="signup-form" class="form-section">
+                    <input type="text" placeholder="FULL NAME" required>
+                    <input type="email" placeholder="EMAIL" required>
+                    <input type="telepon" placeholder="NO TELEPON" required>
+                    <input type="password" placeholder="PASSWORD" required>
+                    <input type="password" placeholder="CONFIRM PASSWORD" required>
+                    <button type="button" onclick="window.location.href='profile.html'">Sign Up</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

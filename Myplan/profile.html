@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,50 +19,408 @@
     <title>Myplan - Profile</title>
   </head>
   <body>
-    <nav class="navbar">
-      <h1>MyPlan</h1>
-    </nav>
-    <main class="main-container">
-      <aside class="photo-container">
-        <div class="box-photo">
-          <img class="photo" src="person profile.jpg" />
-          <h3>Welcome!</h3>
+    <nav
+      class="navbar navbar-expand-lg sticky-top px-5"
+      style="background-color: #b7e0ff"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand text-dark fw-bold" href="#">Myplan</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-black navbar-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item ml-4">
+              <a
+                class="nav-link active text-dark fw-bold"
+                aria-current="page"
+                href="/home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item ml-4">
+              <a class="nav-link active text-dark fw-bold" href="#">Manage</a>
+            </li>
+            <li class="nav-item ml-4">
+              <a class="nav-link active text-dark fw-bold" href="#">Analysis</a>
+            </li>
+          </ul>
         </div>
-      </aside>
-      <section class="section-identity">
-        <div class="identity-container">
-          <h1>Your Profile</h1>
-          <p class="identity-data">Name: John Doe</p>
-          <p class="identity-data">Email: DummyEmail@gmail.com</p>
-          <p class="identity-data">Phone: +6285432198765</p>
+      </div>
+    </nav>
+    <main
+      class="custom-container align-items-center justify-content-center gap-5"
+    >
+      <section class="vector-illustration z-n1">
+        <svg
+          viewBox="0 0 367.59818 324.82266"
+          version="1.1"
+          id="svg5"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:svg="http://www.w3.org/2000/svg"
+        >
+          <defs id="defs2" />
+          <g id="layer1" transform="translate(27.488824,138.04344)">
+            <path
+              style="
+                fill: #b7e0ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path950"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(-0.37480194,0,0,-0.37480194,123.82594,117.25836)"
+            />
+            <path
+              style="
+                fill: #b7e0ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path952"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.37480195,0,0,0.37480195,145.82772,86.943318)"
+            />
+            <path
+              style="
+                fill: #dce3ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path954"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.37480194,0,0,0.37480194,87.86284,97.453331)"
+            />
+            <path
+              style="
+                fill: #b7e0ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path988"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(-0.46989909,0,0,-0.46989909,182.91005,44.720483)"
+            />
+            <path
+              style="
+                fill: #b7e0ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path990"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.4698991,0,0,0.4698991,210.49426,6.7137136)"
+            />
+            <path
+              style="
+                fill: #dce3ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path992"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.46989909,0,0,0.46989909,137.82216,19.890394)"
+            />
+            <path
+              style="
+                fill: #b7e0ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1002"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(-0.59931742,0,0,-0.59931742,235.30101,100.61608)"
+            />
+            <path
+              style="
+                fill: #8181ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1006"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.59931742,0,0,0.59931742,177.79513,68.94736)"
+            />
+            <path
+              style="
+                fill: #8181ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1010"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.59931743,0,0,0.59931743,270.48238,52.141594)"
+            />
+            <path
+              style="
+                fill: #b7e0ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1018"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.45258213,0,0,0.45258213,302.91893,-34.092989)"
+            />
+            <path
+              style="
+                fill: #dce3ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1020"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.45258212,0,0,0.45258212,232.92498,-21.401903)"
+            />
+            <path
+              style="
+                fill: #8181ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1022"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(-0.45258212,0,0,-0.45258212,276.35127,2.5131346)"
+            />
+            <path
+              style="
+                fill: #8181ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1034"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.64954605,0,0,0.64954605,167.86606,-97.493678)"
+            />
+            <path
+              style="
+                fill: #b7e0ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1036"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(-0.64954605,0,0,-0.64954605,230.19149,-63.170806)"
+            />
+            <path
+              style="
+                fill: #dce3ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1038"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.64954607,0,0,0.64954607,268.32141,-115.70793)"
+            />
+            <path
+              style="
+                fill: #b7e0ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1042"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.5323661,0,0,0.5323661,1.587547,125.41384)"
+            />
+            <path
+              style="
+                fill: #b7e0ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1046"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(0.53236611,0,0,0.53236611,83.920463,110.48549)"
+            />
+            <path
+              style="
+                fill: #8181ff;
+                fill-opacity: 1;
+                stroke-width: 0.499999;
+                stroke-linecap: square;
+                stop-color: #000000;
+              "
+              id="path1050"
+              d="m 82.173948,115.26915 -136.791194,0 68.395597,-118.4646532 z"
+              transform="matrix(-0.5323661,0,0,-0.5323661,52.669293,153.54477)"
+            />
+          </g>
+        </svg>
+      </section>
+      <section class="profile-container mx-3 shadow d-flex flex-column py-4">
+        <div
+          class="photo-border mx-auto rounded-circle border border-dark position-relative"
+        >
+          <img
+            class="photo rounded-circle position-absolute top-50 start-50 translate-middle"
+            src="person profile.jpg"
+          />
         </div>
 
-        <a href="landingPage.html" class="logout-button">
-          <svg fill="white" height="16px" width="16px" version="1.1" id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 320.002 320.002" xml:space="preserve">
-            <g id="XMLID_6_">
-              <path id="XMLID_7_" d="M51.213,175.001h173.785c8.284,0,15-6.716,15-15c0-8.284-6.716-15-15-15H51.213l19.394-19.394
-              c5.858-5.858,5.858-15.355,0-21.213c-5.857-5.858-15.355-5.858-21.213,0L4.396,149.393c-0.351,0.351-0.683,0.719-0.997,1.103
-              c-0.137,0.167-0.256,0.344-0.385,0.515c-0.165,0.22-0.335,0.435-0.488,0.664c-0.14,0.209-0.261,0.426-0.389,0.64
-              c-0.123,0.206-0.252,0.407-0.365,0.619c-0.118,0.22-0.217,0.446-0.323,0.67c-0.104,0.219-0.213,0.435-0.306,0.659
-              c-0.09,0.219-0.164,0.442-0.243,0.664c-0.087,0.24-0.179,0.477-0.253,0.722c-0.067,0.222-0.116,0.447-0.172,0.672
-              c-0.063,0.249-0.133,0.497-0.183,0.751c-0.051,0.259-0.082,0.521-0.119,0.782c-0.032,0.223-0.075,0.443-0.097,0.669
-              c-0.048,0.484-0.073,0.971-0.074,1.457c0,0.007-0.001,0.015-0.001,0.022c0,0.007,0.001,0.015,0.001,0.022
-              c0.001,0.487,0.026,0.973,0.074,1.458c0.022,0.223,0.064,0.44,0.095,0.661c0.038,0.264,0.069,0.528,0.121,0.79
-              c0.05,0.252,0.119,0.496,0.182,0.743c0.057,0.227,0.107,0.456,0.175,0.681c0.073,0.241,0.164,0.474,0.248,0.71
-              c0.081,0.226,0.155,0.453,0.247,0.675c0.091,0.22,0.198,0.431,0.3,0.646c0.108,0.229,0.21,0.46,0.33,0.685
-              c0.11,0.205,0.235,0.4,0.354,0.599c0.131,0.221,0.256,0.444,0.4,0.659c0.146,0.219,0.309,0.424,0.466,0.635
-              c0.136,0.181,0.262,0.368,0.407,0.544c0.299,0.364,0.616,0.713,0.947,1.048c0.016,0.016,0.029,0.034,0.045,0.05l45,45.001
-              c2.93,2.929,6.768,4.394,10.607,4.394c3.838-0.001,7.678-1.465,10.606-4.393c5.858-5.858,5.858-15.355,0.001-21.213L51.213,175.001
-              z"/>
-              <path id="XMLID_8_" d="M305.002,25h-190c-8.284,0-15,6.716-15,15v60c0,8.284,6.716,15,15,15s15-6.716,15-15V55h160v210.001h-160
-              v-45.001c0-8.284-6.716-15-15-15s-15,6.716-15,15v60.001c0,8.284,6.716,15,15,15h190c8.284,0,15-6.716,15-15V40
-              C320.002,31.716,313.286,25,305.002,25z"/>
-            </g>
-          </svg>
-          <p class="button-text">Log Out</p>
-        </a>
-        
+        <div class="mx-4 mt-3 d-flex flex-column">
+          <p class="text-black fw-semibold mb-1">Name</p>
+          <p class="text-black mb-0">John Doe</p>
+        </div>
+
+        <div class="mx-4 mt-3 d-flex flex-column">
+          <p class="text-black fw-semibold mb-1">Phone Number</p>
+          <p class="text-black mb-0">+6285812345678</p>
+        </div>
+
+        <div class="mx-4 mt-3 d-flex flex-column">
+          <p class="text-black fw-semibold mb-1">Email</p>
+          <p class="text-black mb-0">dummy@gmail.com</p>
+        </div>
+
+        <div class="mx-4 mt-3 d-flex flex-column gap-2">
+          <button
+            type="button"
+            class="btn btn-soft-blue d-flex justify-content-center align-items-center"
+          >
+            Edit Profile
+          </button>
+          <button
+            type="button"
+            class="btn btn-soft-red d-flex justify-content-center align-items-center"
+            onclick="document.location='landingPage.html'">
+            Logout
+          </button>
+        </div>
+      </section>
+      <section
+        class="utility-container d-flex flex-column justify-content-between"
+      >
+        <div class="change-password-container shadow d-flex flex-column">
+          <p class="text-black fw-semibold mx-4 card-header my-3">
+            Change Password
+          </p>
+          <hr class="border border-1 m-0" />
+
+          <div class="card-content px-4 pt-3">
+            <div class="d-flex flex-column gap-2">
+              <p class="m-0 label-font font-weight-semibold">New Password</p>
+              <input type="password" class="form-control bg-light" />
+            </div>
+          </div>
+
+          <div class="card-content px-4 pt-3">
+            <div class="d-flex flex-column gap-2">
+              <p class="m-0 label-font font-weight-semibold">
+                Confirm Password
+              </p>
+              <input type="password" class="form-control bg-light" />
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-row align-items-center justify-content-between w-100 h-100 px-4"
+          >
+            <button
+              type="button"
+              class="btn btn-soft-blue d-flex justify-content-center align-items-center password-button"
+            >
+              Change Password
+            </button>
+            <button
+              type="button"
+              class="btn btn-soft-red d-flex justify-content-center align-items-center password-button"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+
+        <div class="delete-account-container shadow d-flex flex-column">
+          <p class="text-black fw-semibold mx-4 card-header my-3">
+            Delete Account
+          </p>
+          <hr class="border border-1 m-0" />
+
+          <div
+            class="d-flex flex-row py-3 px-4 gap-3 align-items-center justify-content-center"
+          >
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_103_1890)">
+                <path
+                  d="M8.98201 1.56595C8.88302 1.39352 8.74028 1.25025 8.56821 1.15062C8.39614 1.051 8.20084 0.998535 8.00201 0.998535C7.80318 0.998535 7.60787 1.051 7.4358 1.15062C7.26373 1.25025 7.121 1.39352 7.02201 1.56595L0.165007 13.233C-0.291993 14.011 0.256007 15 1.14501 15H14.858C15.747 15 16.296 14.01 15.838 13.233L8.98201 1.56595ZM8.00001 4.99995C8.53501 4.99995 8.95401 5.46195 8.90001 5.99495L8.55001 9.50195C8.53825 9.63972 8.47521 9.76806 8.37336 9.86159C8.27152 9.95511 8.13828 10.007 8.00001 10.007C7.86173 10.007 7.7285 9.95511 7.62665 9.86159C7.52481 9.76806 7.46177 9.63972 7.45001 9.50195L7.10001 5.99495C7.08744 5.86919 7.10135 5.74218 7.14085 5.62212C7.18035 5.50206 7.24456 5.3916 7.32935 5.29786C7.41414 5.20413 7.51762 5.12919 7.63313 5.07788C7.74864 5.02657 7.87361 5.00002 8.00001 4.99995ZM8.00201 11C8.26722 11 8.52158 11.1053 8.70911 11.2928C8.89665 11.4804 9.00201 11.7347 9.00201 12C9.00201 12.2652 8.89665 12.5195 8.70911 12.7071C8.52158 12.8946 8.26722 13 8.00201 13C7.73679 13 7.48244 12.8946 7.2949 12.7071C7.10736 12.5195 7.00201 12.2652 7.00201 12C7.00201 11.7347 7.10736 11.4804 7.2949 11.2928C7.48244 11.1053 7.73679 11 8.00201 11Z"
+                  fill="#DC3545"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_103_1890">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <p class="warning-text m-0">
+              Warning, deleting account will remove the account permanently and
+              cannot be recovered
+            </p>
+          </div>
+
+          <div
+            class="d-flex flex-row align-items-center justify-content-center w-100 h-100 px-4"
+          >
+            <button
+              type="button"
+              class="btn btn-danger delete-account-button d-flex justify-content-center align-items-center password-button fw-semibold"
+              onclick="document.location='landingPage.html'"
+            >
+              Delete Account Permanently
+            </button>
+          </div>
+        </div>
       </section>
     </main>
   </body>
