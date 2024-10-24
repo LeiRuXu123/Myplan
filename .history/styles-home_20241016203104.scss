@@ -1,0 +1,198 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.cardDropdown{
+    position: relative;
+    width: 30%;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow: hidden;
+    transition  : height 0.5s ease-in-out;
+}
+
+.cardDropdown.active{
+    height: 330px;
+}
+
+.contentCardDropdown{
+    display: block;
+    align-items: center;
+}
+
+.contentCardDropdown .profile{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.contentCardDropdown .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contentCardDropdown .h2{
+    margin-left: 15px;
+}
+
+.dropdownCard{
+    position: relative;
+    top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.dropdownCard li{
+    list-style: none;
+    margin: 15px 0;
+}
+
+.dropdownCard li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 1.1em;
+    transition: color 0.25s;
+}
+
+.dropdownCard li a ion-icon {
+    font-size: 1.6em;
+    margin-right: 10px;
+}
+
+.toggle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: #181C14;
+    border-end-end-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle ion-icon{
+    color: #fff;
+    font-size: 1.4em;
+    transition: transform ease-in-out 0.5s;
+}
+
+.cardDropdown.active .toggle ion-icon{
+    transform: rotate(-180deg);
+}
+
+.content-container{
+    display: flex;
+    align-items: flex-start;
+    height: 400px;
+    justify-content: space-between;
+}
+
+.chart-expenses{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #E78F81;
+    font-size: 24px;
+    text-align: start;
+    margin-top: 50px;
+}
+
+.chart-expenses {
+    flex-grow: 1;
+}
+
+.chart-container{
+    width: 400px;
+}
+
+.expenses-type{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  
+    box-shadow: 0 4px 12px-2px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.expenses-type:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px-7px rgba(0, 0, 0, 0.3);
+}
+
+.expenses-type .details ul{
+    list-style: none;
+}
+
+.expenses-type .details ul li{
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+.expenses-type .details .percentages{
+    font-weight: 800;
+    color: #295F98;
+}
+
+.right-card {
+    flex-grow: 0; /* Memastikan .right-card tidak melebar */
+    width: auto; /* Mengambil lebar yang dibutuhkan */
+    margin-left: 20px; /* Memberi jarak antara grafik dan kartu di kanan */
+}
+
+.right-card .container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    .container {
+      display: flex;
+      flex-direction:column;
+    }
+}
+
+.add-card-buttons {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
