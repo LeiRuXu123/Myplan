@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rammetto+One&display=swap");
+
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  /* font-family: "Rammetto One"; */
+  background: #f5f6f8;
+  font-family: "Inter", sans-serif;
+}
+
+/* sidenav */
+
+.custom-sidenav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  width: 60px;
+  margin: 0px;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.sidenav-button {
+  background-color: transparent;
+  width: fit-content;
+  padding: 0px;
+  height: fit-content;
+}
+
+.sidenav-button:active {
+  border-style: outset;
+  border: 0px;
+}
+
+.sidenav-button:hover {
+  background-color: #f5f6f8;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+/* Offcanvas */
+
+.offcanvas-size {
+  width: 300px !important;
+  padding-bottom: 10px;
+}
+
+.offcanvas-title-style {
+  margin-left: 10px;
+}
+
+.offcanvas-body {
+  padding: 0px !important;
+}
+
+/* profile */
+
+.profile-container {
+  margin-bottom: 10px;
+}
+
+.profile {
+  background: rgb(10, 102, 194);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(10, 102, 194, 0) 0%,
+    rgba(26, 91, 163, 0.51) 49%,
+    rgba(10, 102, 194, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(10, 102, 194, 0) 0%,
+    rgba(26, 91, 163, 0.51) 49%,
+    rgba(10, 102, 194, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(10, 102, 194, 0) 0%,
+    rgba(26, 91, 163, 0.51) 49%,
+    rgba(10, 102, 194, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a66c2",endColorstr="#0a66c2",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a66c2",endColorstr="#0a66c2",GradientType=1);
+  border-radius: 100px;
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  outline: 8px white solid;
+}
+
+.profile-details {
+  font-size: 12px;
+  margin: 0px;
+}
+
+/* list menu */
+
+.list-of-menu {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.dashboard-button {
+  background-color: #c2ddfc !important;
+}
+
+.list-button {
+  background-color: transparent;
+  border: 0px;
+  padding-left: 20px;
+  margin-bottom: 4px;
+  height: 40px;
+  width: 90%;
+}
+
+.list-button:hover {
+  background-color: #c2ddfc;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.list-button-text {
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+
+/* main-section */
+
+.main-section {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.main-section-title {
+  font-size: 24px;
+  color: black;
+  padding-top: 32px;
+  padding-left: 32px;
+  margin: 0px;
+  height: fit-content;
+}
+
+.main-section-other {
+  padding-top: 32px;
+  padding-right: 32px;
+}
+
+.input-search {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+/* first-section */
+
+.first-section {
+  padding: 32px;
+}
+
+.transaction {
+  background-color: #c2ddfc;
+  padding: 18px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.transaction-text {
+  margin: 0px;
+  font-weight: bold;
+}
+
+.income {
+  color: #13b26d;
+}
+
+.spending {
+  color: #ef5962;
+}
+
+.line-chart {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.line-chart-title-container {
+  margin-bottom: 16px;
+}
+
+.line-chart-title {
+  margin: 0px;
+  font-weight: bold;
+}
+
+/* second-section */
+
+.second-section {
+  padding: 32px;
+}
+
+.doughnut-chart {
+  padding: 18px;
+  border-radius: 20px;
+  font-size: 18px;
+  height: 270px;
+}
+
+.doughnut-chart-container {
+  height: 200px;
+}
+
+.doughnut-chart-title {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.doughnut-chart-detail-container {
+  margin-bottom: 8px;
+}
+
+.doughnut-chart-detail {
+  font-size: 14px;
+  margin-left: 8px;
+  margin-bottom: 0px;
+}
+
+.transaction-history {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 20px;
+  font-size: 18px;
+  height: 270px;
+}
+
+.transaction-history-box {
+  margin-top: 8px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 8px;
+  width: auto;
+  border-bottom: 1px rgba(0, 0, 0, 0.25) solid;
+}
+
+.transaction-history-title {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.transaction-history-text {
+  margin-bottom: 0px;
+}
+
+.transaction-history-detail {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
